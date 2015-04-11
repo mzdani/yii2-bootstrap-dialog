@@ -80,7 +80,7 @@ class BootstrapDialog extends Widget {
 	public function run() {
 		$dialog = $this->generateScript();
 		if ($this->js) {
-			echo $dialog;
+			echo $dialog.';';
 		} else {
 			$this->view->registerJs($dialog, self::POS_END);
 		}
