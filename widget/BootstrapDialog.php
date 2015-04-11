@@ -146,53 +146,31 @@ class BootstrapDialog extends Widget {
 	protected function _setButtons() {
 		$button = [];
 		foreach ($this->buttons as $key => $value) {
-
 			$value['label'] = (isset($value['label'])) ? $value['label'] : 'Unknown Buttons '.($key + 1);
-
 			if (isset($value['action'])) {
 				$value['action'] = new JsExpression(Html::decode($value['action']));
 			}
 			$button[$key] = $value;
 		}
-
 		return $button;
 	}
 
 	protected function Bootstrap() {
-		//$genId    = 'dialog_'.$this->getId();
-		//$this->id = (!$this->id) ? $genId : $this->id;
-		//$this->options['id'] = $this->id;
-
 		return 'BootstrapDialog.show('.Json::encode($this->options).');';
 	}
 
 	protected function BootstrapCallable() {
-		//$genId    = 'dialog_'.$this->getId();
-		//$this->id = (!$this->id) ? $genId : $this->id;
-		//$this->options['id'] = $this->id;
-
 		$this->genId = 'dialog_'.$this->getId();
-
 		return 'var '.$this->genId.' = new BootstrapDialog('.Json::encode($this->options).');';
 	}
 
 	protected function BootstrapAlert() {
-		//$genId    = 'dialogAlert_'.$this->getId();
-		//$this->id = (!$this->id) ? $genId : $this->id;
-		//$this->options['id'] = $this->id;
-
 		$this->genId = 'dialog_'.$this->getId();
-
 		return 'var '.$this->genId.' = BootstrapDialog.alert('.Json::encode($this->options).')';
 	}
 
 	protected function BootstrapConfirm() {
-		//$genId    = 'dialogConfirm_'.$this->getId();
-		//$this->id = (!$this->id) ? $genId : $this->id;
-		//$this->options['id'] = $this->id;
-
 		$this->genId = 'dialog_'.$this->getId();
-
 		return 'var '.$this->genId.' = BootstrapDialog.confirm('.Json::encode($this->options).')';
 	}
 
