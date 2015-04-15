@@ -3,6 +3,7 @@
     "description": "Yii2 Bootstrap3 Dialog Wrapper - Make use of Bootstrap Modal more monkey-friendly.",
     "type": "yii2-extension",
     "keywords": ["yii2", "wrapper", "bootstrap3 dialog"],
+    "version": "1.0.0",
     "license": "BSD-3-Clause",
     "support": {
         "issues": "https://bitbucket.org/mzdani/yii2-bootstrap-dialog/issues?status=new&status=open",
