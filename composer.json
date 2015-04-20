@@ -1,5 +1,5 @@
 {
-    "name": "mdscomp/yii2-bootstrap-dialog",
+    "name": "mzdani/yii2-bootstrap-dialog",
     "description": "Yii2 Bootstrap3 Dialog Wrapper - Make use of Bootstrap Modal more monkey-friendly.",
     "type": "yii2-extension",
     "keywords": ["yii2", "wrapper", "bootstrap3 dialog"],
