@@ -35,6 +35,22 @@ class Dialog {
 	}
 
 	/**
+	 * Return the dialog javascript. Usage: dialogInstance.register()
+	 *
+	 * @param        $view \yii\web\View|string
+	 *
+	 * @return JsExpression
+	 */
+	public function open($view) {
+		$js = new JsExpression($this->id);
+		if($view !== 'js'){
+			$view->registerJs($js, self::POS_END);
+		} else {
+			return $js;
+		}
+	}
+
+	/**
 	 * Open the dialog. Usage: dialogInstance.open()
 	 *
 	 * @param        $view \yii\web\View|string
