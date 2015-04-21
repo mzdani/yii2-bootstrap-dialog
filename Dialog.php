@@ -41,7 +41,7 @@ class Dialog {
 	 *
 	 * @return JsExpression
 	 */
-	public function open($view) {
+	public function register($view) {
 		$js = new JsExpression($this->id);
 		if($view !== 'js'){
 			$view->registerJs($js, self::POS_END);
