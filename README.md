@@ -14,13 +14,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require "mdscomp/yii2-bootstrap-dialog" "dev-master"
+php composer.phar require --prefer-dist "mdscomp/yii2-bootstrap-dialog" "~1.0"
 ```
 
 or add
 
 ```
-"mdscomp/yii2-bootstrap-dialog": "dev-master"
+"mdscomp/yii2-bootstrap-dialog": "~1.0"
 ```
 
 to the require section of your `composer.json` file.
