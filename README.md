@@ -29,4 +29,4 @@ to the require section of your `composer.json` file.
 Usage
 -----
 
-[Usage Wiki](https://bitbucket.org/mzdani/mdscomp-bootstrap-dialog/wiki/Usage)
+[Usage Wiki](https://bitbucket.org/mzdani/yii2-bootstrap-dialog/wiki/Usage)
