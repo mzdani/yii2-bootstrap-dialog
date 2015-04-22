@@ -25,9 +25,12 @@ class Dialog {
 	const PH_BODY_END      = '<![CDATA[YII-BLOCK-BODY-END]]>';
 
 	private $id;
+	private $js;
 
 	public function __construct($config = []) {
-		$this->id = BootstrapDialog::widget($config);
+		$js = new BootstrapDialog($config);
+		$this->js = $js->run();
+		$this->id = $js->genId;
 	}
 
 	public function getId() {
@@ -42,7 +45,7 @@ class Dialog {
 	 * @return JsExpression
 	 */
 	public function register($view) {
-		$js = new JsExpression($this->id);
+		$js = new JsExpression($this->js);
 		if($view !== 'js'){
 			$view->registerJs($js, self::POS_END);
 		} else {
@@ -58,7 +61,7 @@ class Dialog {
 	 * @return JsExpression
 	 */
 	public function open($view) {
-		$js = new JsExpression($this->id.'.open();');
+		$js = new JsExpression($this->js.$this->id.'.open();');
 		if($view !== 'js'){
 			$view->registerJs($js, self::POS_END);
 		} else {

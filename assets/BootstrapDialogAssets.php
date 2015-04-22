@@ -12,7 +12,7 @@ namespace mdscomp\BootstrapDialog\assets;
 use yii\web\AssetBundle;
 
 class BootstrapDialogAssets extends AssetBundle {
-	public $sourcePath = '@bower/bootstrap3-dialog/dist';
+	public $sourcePath = '@vendor/cross-solution/bootstrap3-dialog/dist';
 	public $css      = [
 		'css/bootstrap-dialog.css',
 	];

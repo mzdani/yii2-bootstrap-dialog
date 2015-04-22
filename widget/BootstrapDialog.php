@@ -68,7 +68,7 @@ class BootstrapDialog extends Widget {
 	public $option          = [];
 	public $js              = false;
 
-	private $genId;
+	public $genId;
 	private $options = [];
 
 	public function init() {
@@ -80,11 +80,11 @@ class BootstrapDialog extends Widget {
 	public function run() {
 		$dialog = $this->generateScript();
 		if ($this->js) {
-			echo $dialog.';';
+			return $dialog.';';
 		} else {
 			$this->view->registerJs($dialog, self::POS_END);
 		}
-		return $this->genId;
+		//return $this->genId;
 	}
 
 	protected function initOptions() {
